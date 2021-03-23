@@ -103,3 +103,7 @@
 
 - https://code.visualstudio.com/docs/remote/containers
 - https://github.com/Microsoft/vscode-remote-try-python
+
+** MLOps lifecycle
+
+- https://towardsdatascience.com/applying-the-mlops-lifecycle-3b60033b7cbf
