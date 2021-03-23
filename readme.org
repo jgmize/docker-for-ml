@@ -1,0 +1,105 @@
+* Docker for Machine Learning
+
+** Introduction to Docker
+
+- https://www.docker.com/
+- https://www.docker.com/resources/what-container
+- https://github.com/moby/moby
+- https://docker-curriculum.com/
+- http://slides.com/jgmize/docker-deis-continuous-delivery-1#/1/1
+
+*** Container Registries
+
+- https://hub.docker.com/
+- https://aws.amazon.com/ecr/
+- https://cloud.google.com/container-registry/
+  - https://cloud.google.com/artifact-registry
+- https://docs.microsoft.com/en-us/azure/container-registry/
+- https://www.digitalocean.com/products/container-registry/
+- https://docs.openshift.com/container-platform/4.7/registry/registry-options.html#registry-options
+
+*** Docker Compose
+
+- https://docs.docker.com/compose/
+
+*** Volumes and bind mounts
+
+- https://docs.docker.com/storage/bind-mounts/
+  - https://docs.docker.com/storage/bind-mounts/#start-a-container-with-a-bind-mount
+  - https://docs.docker.com/engine/reference/commandline/run/#mount-volume--v---read-only
+- https://docs.docker.com/storage/volumes/
+  - https://docs.docker.com/storage/volumes/#start-a-container-with-a-volume
+  - https://docs.docker.com/storage/volumes/#use-a-volume-with-docker-compose
+
+*** Exposing ports
+
+- https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose
+
+*** Using a remote docker host
+
+- https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-socket-option
+- https://www.serverlab.ca/tutorials/containers/docker/how-to-access-remote-docker-daemon-using-ssh/
+- https://twitter.com/vicnastea/status/1372278357321129987
+  - https://github.com/jgmize/dotfiles/commit/f8b987ed7f133efc7fadbadf3d1433c303e83b48
+- can't use bind mounts to local directory
+- ports are exposed on remote host
+
+*** Using a GPU
+
+- https://docs.docker.com/config/containers/resource_constraints/#gpu
+- https://github.com/NVIDIA/nvidia-docker
+- https://www.docker.com/blog/wsl-2-gpu-support-is-here/
+- not currently possible on Mac
+- GKE
+  - https://cloud.google.com/kubernetes-engine/docs/how-to/gpus
+- EKS
+  - https://aws.amazon.com/blogs/compute/running-gpu-accelerated-kubernetes-workloads-on-p3-and-p2-ec2-instances-with-amazon-eks/
+  - https://github.com/aws-samples/machine-learning-using-k8s/blob/master/docs/eks-gpu.md
+
+** Jupyterlab
+
+- http://jupyterlab.io/
+
+*** Jupyter docker-stacks
+
+- https://github.com/jupyter/docker-stacks
+- https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html
+- https://github.com/iot-salzburg/gpu-jupyter/
+- Example:
+  #+begin_src sh
+  docker run -d -p 8888:8888 -v $(pwd):/home/jupyter jupyter/tensorflow-notebook
+  #+end_src
+
+** Sagemaker
+
+- https://aws.amazon.com/sagemaker/
+- https://github.com/data-science-on-aws/workshop
+- https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi-attach.html
+
+** Google AI Platform
+
+*** Deep Learning Containers
+
+- https://cloud.google.com/ai-platform/deep-learning-containers
+- https://cloud.google.com/ai-platform/deep-learning-containers/docs/getting-started-local
+- https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container
+- Example: Pytorch CPU
+  #+begin_src sh
+  docker run -d -p 8080:8080 -v $(pwd):/home/jupyter gcr.io/deeplearning-platform-release/pytorch-cpu
+  #+end_src
+
+** Kubernetes
+
+- https://k8s.io
+
+*** Kubeflow
+
+- https://www.kubeflow.org/
+  - https://www.kubeflow.org/docs/started/kubeflow-overview/
+- https://github.com/kubeflow/kubeflow
+- https://github.com/kubeflow/examples
+
+** VS Code Remote Containers
+
+- https://code.visualstudio.com/docs/remote/containers
+- https://github.com/Microsoft/vscode-remote-try-python
