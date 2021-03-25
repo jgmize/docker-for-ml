@@ -101,10 +101,17 @@
 - https://github.com/kubeflow/kubeflow
 - https://github.com/kubeflow/examples
 
-** VS Code Remote Containers
+** VS Code
+
+*** Remote Containers
 
 - https://code.visualstudio.com/docs/remote/containers
 - https://github.com/Microsoft/vscode-remote-try-python
+
+*** code-server
+    
+- https://github.com/cdr/code-server
+- https://github.com/linuxserver/docker-code-server
 
 ** MLOps lifecycle
 
