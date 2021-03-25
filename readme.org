@@ -11,6 +11,8 @@
 *** Container Registries
 
 - https://hub.docker.com/
+- https://ghcr.io
+  - https://github.com/features/packages
 - https://aws.amazon.com/ecr/
 - https://cloud.google.com/container-registry/
   - https://cloud.google.com/artifact-registry
